@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Loading Page Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div id="loader-container">Loading...</div>
+    <script src="/dist/bundle.js"></script>
+    <script>
+      var loader = 'threeBars'
+      if (/three-dots/.test(location.search)) {
+        loader = 'threeDots'
+      }
+
+      loadingPage.render(loadingPage.loaders[loader], {fullSizeBody: true})
+    </script>
+  </body>
+</html>
